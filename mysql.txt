@@ -1,0 +1,1047 @@
+USE CASE:
+
+if-else: (2 conditions)
+Nested If-else: Conditions inside conditions
+Switch: Multiple conditions
+If else-if
+
+
+
+ARRAYS IN JAVA: 
+
+
+Scanner sc = new Scanner(System.in);   //here new is going to create new object
+Int [ ] arr = new int[90];      //declaration 
+for (int i=0; i<90; i++){
+arr[i]= sc.nextInt[];
+}      
+
+NOTE:  If try to access the indices out of all size it throws IndexOutOfBoundException.
+
+
+
+
+2D ARRAY: 
+
+        int[ ][ ] mat = new int[n][m]       //n=row , m=coloumn
+
+	• Collection of Single array is called 2D array.
+
+
+STRING:  
+
+	• Sting is a immutable(can't be change once it is created).
+	
+		○ length(): It's indicates the length of the string.
+		
+		○ Split(): It is a parameter used for space (Separation of words)
+		
+		○ Trim(): It is a parameter used to remove space from leading/trailing spaces(Beginning/ending).
+	
+
+STRING METHODS:
+		
+		Method	Use	Example
+				
+		length()	Finds length of string	s.length() → 11
+		charAt()	Gets character at index	s.charAt(0) → H
+		toUpperCase()	Converts to uppercase	s.toUpperCase() → HELLO WORLD
+		toLowerCase()	Converts to lowercase	s.toLowerCase() → hello world
+		equals()	Compares content	"Java".equals("Java") → true
+		equalsIgnoreCase()	Compare ignoring case	"JAVA".equalsIgnoreCase("java") → true
+		contains()	Checks substring	s.contains("World") → true
+		substring()	Extracts part of string	s.substring(0,5) → Hello
+		indexOf()	Finds position	s.indexOf("W") → 6
+		replace()	Replaces characters/text	s.replace("World","Java")
+		trim()	Removes spaces at ends	" Hello ".trim()
+		isEmpty()	Checks if empty	s.isEmpty()
+		startsWith()	Checks starting text	s.startsWith("Hello")
+		endsWith()	Checks ending text	s.endsWith("World")
+
+
+
+
+STRING BUILDER & STRING BUFFER:
+
+String str= "MRU";
+StringBuilder sb = new StringBuilder(str);
+Sb.append("SOE-2");  //MRU-SOE-2//
+String Nstr= sb.to string();
+
+
+Searching:
+
+There are two types of searching methods:
+
+	• Linear Search
+	• Binary Search
+
+
+LINEAR SEARCH:
+
+	• We use conditions to travesal the array.
+	• In L.S we are using Flg=1 if element is found or Flg==-1 if element is not found   
+
+
+Class & Object:
+	
+	• Class is a Blueprint for creating the objects. 
+	• Object is a instance of a class and it's stores some data and occupies some memory.
+
+
+NOTE:  Don't use keywords as variable names.
+
+
+
+METHOD OVERRIDING:   
+
+	• Same method name with same parameters. 
+
+NOTE:    
+ 
+
+JDK  java development kit
+JRE  java runtime environment
+JVM  java virtual machine
+Here java is converted from high level to binary level because computer only understand 0 and 1
+
+
+ASSIGNMENT 1 :
+
+
+ArrayList<String> courses
+
+
+
+
+
+
+Anonymas  does not have any names
+Sorting
+Collections.sort(names,(s1,s2) -> s1.length()-s2.length());
+Thread
+Thread thread =new thread (() -> system.out.println(“running in thread”));
+Event listener
+
+4. Multipule Statements (must use curly braces)
+
+
+
+
+MODULE 1:  What is Retinal Database?
+
+Sql :
+Rows  = individual record , tuples
+Columns = attributes , fields
+A relational database into tables with rows and columns
+Primary key : unique identifier
+
+Basic CREATE TABLE Structure
+CREATE TABLE table_name (
+Column1 datatype constrains,
+Column2 datatype constrains,
+Column3 datatype constrains,
+…
+PRIMARY KEY (column1)
+);
+
+-- Example: Students table
+CREATE TABLE students (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ name VARCHAR(100) NOT NULL,
+Email VARCHAR(100) UNIQUE NOT NULL,
+Phone VARCHAR 
+
+
+
+FOREIGN KEY:
+
+• A Foreign Key is a column (or set of columns) in one table that refers to the Primary Key of another table. 
+• It is used to create a relationship between tables. 
+• Maintains referential integrity (prevents invalid data).
+EX:
+
+ 
+Student Table
+
+Student_ID (PK)	Name
+101	suri
+102	Ravi
+Marks Table
+Mark_ID	Student_ID (FK)	Marks
+1	101	90
+2	102	85
+Here, Student_ID in the Marks table is a Foreign Key referring to Student_ID in the Student table.
+
+
+
+============================================================
+                 MYSQL NOTES
+         DATABASE OPERATIONS & SQL COMMANDS
+============================================================
+
+Definition
+----------
+MySQL is an open-source Relational Database Management System
+(RDBMS) used to store, manage, retrieve, and manipulate data.
+
+Database
+--------
+A database is an organized collection of related data.
+
+Example
+
+College Database
+
+Student Table
+
+Faculty Table
+
+Course Table
+
+============================================================
+TYPES OF SQL COMMANDS
+============================================================
+
+1. DDL (Data Definition Language)
+
+Used to create and modify database objects.
+
+Commands
+
+CREATE
+
+ALTER
+
+DROP
+
+TRUNCATE
+
+RENAME
+
+------------------------------------------------------------
+
+2. DML (Data Manipulation Language)
+
+Used to insert, update and delete records.
+
+Commands
+
+INSERT
+
+UPDATE
+
+DELETE
+
+------------------------------------------------------------
+
+3. DQL (Data Query Language)
+
+Used to retrieve data.
+
+Command
+
+SELECT
+
+------------------------------------------------------------
+
+4. DCL (Data Control Language)
+
+Used for permissions.
+
+Commands
+
+GRANT
+
+REVOKE
+
+------------------------------------------------------------
+
+5. TCL (Transaction Control Language)
+
+Used to manage transactions.
+
+Commands
+
+COMMIT
+
+ROLLBACK
+
+SAVEPOINT
+
+============================================================
+DATABASE OPERATIONS
+============================================================
+
+1. Show All Databases
+---------------------
+
+Command
+
+SHOW DATABASES;
+
+Purpose
+
+Displays all databases available in MySQL Server.
+
+------------------------------------------------------------
+
+2. Create a Database
+--------------------
+
+Command
+
+CREATE DATABASE college;
+
+Purpose
+
+Creates a new database named "college".
+
+------------------------------------------------------------
+
+3. Create Database Only If It Doesn't Exist
+-------------------------------------------
+
+Command
+
+CREATE DATABASE IF NOT EXISTS college;
+
+Purpose
+
+Prevents an error if the database already exists.
+
+------------------------------------------------------------
+
+4. Select (Use) a Database
+--------------------------
+
+Command
+
+USE college;
+
+Purpose
+
+Makes "college" the active database.
+
+------------------------------------------------------------
+
+5. Show Current Database
+------------------------
+
+Command
+
+SELECT DATABASE();
+
+Purpose
+
+Displays the currently selected database.
+
+------------------------------------------------------------
+
+6. Delete a Database
+--------------------
+
+Command
+
+DROP DATABASE college;
+
+Purpose
+
+Deletes the database permanently.
+
+------------------------------------------------------------
+
+7. Delete Database Only If It Exists
+------------------------------------
+
+Command
+
+DROP DATABASE IF EXISTS college;
+
+Purpose
+
+Deletes the database only if it exists.
+
+============================================================
+TABLE OPERATIONS
+============================================================
+
+1. Show All Tables
+------------------
+
+Command
+
+SHOW TABLES;
+
+Purpose
+
+Displays all tables in the selected database.
+
+------------------------------------------------------------
+
+2. Create a Table
+-----------------
+
+Command
+
+CREATE TABLE student(
+id INT,
+name VARCHAR(50),
+age INT
+);
+
+Purpose
+
+Creates a new table named "student".
+
+------------------------------------------------------------
+
+3. Describe Table Structure
+---------------------------
+
+Command
+
+DESC student;
+
+OR
+
+DESCRIBE student;
+
+Purpose
+
+Displays table structure including columns, data types,
+null values and keys.
+
+------------------------------------------------------------
+
+4. View Table Creation Statement
+--------------------------------
+
+Command
+
+SHOW CREATE TABLE student;
+
+Purpose
+
+Shows the SQL statement used to create the table.
+
+------------------------------------------------------------
+
+5. Rename a Table
+-----------------
+
+Command
+
+RENAME TABLE student TO students;
+
+Purpose
+
+Changes the table name.
+
+------------------------------------------------------------
+
+6. Delete a Table
+-----------------
+
+Command
+
+DROP TABLE student;
+
+Purpose
+
+Deletes the table permanently.
+
+------------------------------------------------------------
+
+7. Delete Table Only If It Exists
+---------------------------------
+
+Command
+
+DROP TABLE IF EXISTS student;
+
+Purpose
+
+Deletes the table only if it exists.
+
+============================================================
+ALTER TABLE OPERATIONS
+============================================================
+
+1. Add a New Column
+-------------------
+
+Command
+
+ALTER TABLE student
+ADD email VARCHAR(100);
+
+Purpose
+
+Adds a new column to the table.
+
+------------------------------------------------------------
+
+2. Modify Column Data Type
+--------------------------
+
+Command
+
+ALTER TABLE student
+MODIFY age BIGINT;
+
+Purpose
+
+Changes the data type of a column.
+
+------------------------------------------------------------
+
+3. Rename a Column
+------------------
+
+Command
+
+ALTER TABLE student
+RENAME COLUMN name TO student_name;
+
+Purpose
+
+Changes the column name.
+
+------------------------------------------------------------
+
+4. Drop a Column
+----------------
+
+Command
+
+ALTER TABLE student
+DROP COLUMN email;
+
+Purpose
+
+Deletes a column from the table.
+
+============================================================
+INSERT OPERATIONS
+============================================================
+
+1. Insert One Record
+--------------------
+
+Command
+
+INSERT INTO student
+VALUES(101,'Rahul',20);
+
+Purpose
+
+Inserts one row into the table.
+
+------------------------------------------------------------
+
+2. Insert Specific Columns
+--------------------------
+
+Command
+
+INSERT INTO student(id,name)
+VALUES(102,'Kiran');
+
+Purpose
+
+Inserts values into selected columns only.
+
+------------------------------------------------------------
+
+3. Insert Multiple Records
+--------------------------
+
+Command
+
+INSERT INTO student
+VALUES
+(103,'Teja',21),
+(104,'Ravi',22),
+(105,'Sita',20);
+
+Purpose
+
+Inserts multiple rows at once.
+
+============================================================
+SELECT OPERATIONS
+============================================================
+
+1. Display All Records
+----------------------
+
+Command
+
+SELECT * FROM student;
+
+Purpose
+
+Displays all rows and columns.
+
+------------------------------------------------------------
+
+2. Display Selected Columns
+---------------------------
+
+Command
+
+SELECT id,name FROM student;
+
+Purpose
+
+Displays only selected columns.
+
+------------------------------------------------------------
+
+3. Display Unique Values
+------------------------
+
+Command
+
+SELECT DISTINCT age FROM student;
+
+Purpose
+
+Shows unique values only.
+
+============================================================
+UPDATE OPERATIONS
+============================================================
+
+Command
+
+UPDATE student
+SET age=21
+WHERE id=101;
+
+Purpose
+
+Updates existing records.
+
+============================================================
+DELETE OPERATIONS
+============================================================
+
+Command
+
+DELETE FROM student
+WHERE id=101;
+
+Purpose
+
+Deletes selected records.
+
+============================================================
+TRUNCATE TABLE
+============================================================
+
+Command
+
+TRUNCATE TABLE student;
+
+Purpose
+
+Deletes all records from the table but keeps the table
+structure.
+
+============================================================
+DROP TABLE
+============================================================
+
+Command
+
+DROP TABLE student;
+
+Purpose
+
+Deletes the entire table including its structure.
+
+============================================================
+DIFFERENCE
+============================================================
+
+DELETE
+
+Removes selected rows.
+
+Table remains.
+
+Can use WHERE.
+
+Can rollback (with transactions).
+
+------------------------------------------------------------
+
+TRUNCATE
+
+Deletes all rows.
+
+Table remains.
+
+Cannot use WHERE.
+
+Faster than DELETE.
+
+------------------------------------------------------------
+
+DROP
+
+Deletes complete table.
+
+Table structure removed.
+
+Cannot recover easily.
+
+============================================================
+COMMON DATA TYPES
+============================================================
+
+INT
+
+Whole numbers
+
+Example
+
+100
+
+------------------------------------------------------------
+
+BIGINT
+
+Large integers
+
+------------------------------------------------------------
+
+VARCHAR(n)
+
+Variable-length text
+
+Example
+
+VARCHAR(50)
+
+------------------------------------------------------------
+
+CHAR(n)
+
+Fixed-length text
+
+------------------------------------------------------------
+
+FLOAT
+
+Decimal numbers
+
+------------------------------------------------------------
+
+DOUBLE
+
+Large decimal numbers
+
+------------------------------------------------------------
+
+DATE
+
+Stores date
+
+Example
+
+2026-07-20
+
+------------------------------------------------------------
+
+TIME
+
+Stores time
+
+------------------------------------------------------------
+
+DATETIME
+
+Stores both date and time.
+
+============================================================
+CONSTRAINTS
+============================================================
+
+PRIMARY KEY
+
+Unique identifier.
+
+------------------------------------------------------------
+
+NOT NULL
+
+Cannot store NULL.
+
+------------------------------------------------------------
+
+UNIQUE
+
+Duplicate values not allowed.
+
+------------------------------------------------------------
+
+DEFAULT
+
+Assigns a default value.
+
+------------------------------------------------------------
+
+AUTO_INCREMENT
+
+Automatically increases numeric values.
+
+============================================================
+EXAMPLE TABLE
+============================================================
+
+CREATE TABLE student(
+
+id INT PRIMARY KEY AUTO_INCREMENT,
+
+name VARCHAR(50) NOT NULL,
+
+age INT,
+
+email VARCHAR(100) UNIQUE
+
+);
+
+============================================================
+MYSQL EXECUTION FLOW
+============================================================
+
+Start MySQL
+
+↓
+
+SHOW DATABASES;
+
+↓
+
+CREATE DATABASE college;
+
+↓
+
+USE college;
+
+↓
+
+CREATE TABLE student(...);
+
+↓
+
+INSERT INTO student VALUES(...);
+
+↓
+
+SELECT * FROM student;
+
+↓
+
+UPDATE student ...;
+
+↓
+
+DELETE FROM student ...;
+
+↓
+
+TRUNCATE TABLE student;
+
+↓
+
+DROP TABLE student;
+
+↓
+
+DROP DATABASE college;
+
+============================================================
+REAL-LIFE EXAMPLE
+============================================================
+
+College Management System
+
+Database
+
+college
+
+Tables
+
+student
+
+faculty
+
+course
+
+attendance
+
+fees
+
+Each table stores related information.
+
+============================================================
+INTERVIEW / VIVA DEFINITIONS
+============================================================
+
+Database
+
+"A database is an organized collection of related data that
+can be easily accessed, managed, and updated."
+
+------------------------------------------------------------
+
+Table
+
+"A table is a collection of rows and columns used to store
+related information in a database."
+
+------------------------------------------------------------
+
+Primary Key
+
+"A Primary Key uniquely identifies each record in a table."
+
+------------------------------------------------------------
+
+DDL
+
+"DDL commands are used to create and modify database objects."
+
+------------------------------------------------------------
+
+DML
+
+"DML commands are used to insert, update, and delete records."
+
+------------------------------------------------------------
+
+DQL
+
+"DQL is used to retrieve data from the database."
+
+============================================================
+MOST IMPORTANT COMMANDS FOR PRACTICALS
+============================================================
+
+SHOW DATABASES;
+
+CREATE DATABASE database_name;
+
+USE database_name;
+
+SHOW TABLES;
+
+CREATE TABLE table_name(...);
+
+DESC table_name;
+
+INSERT INTO table_name VALUES(...);
+
+SELECT * FROM table_name;
+
+UPDATE table_name SET ... WHERE ...;
+
+DELETE FROM table_name WHERE ...;
+
+ALTER TABLE table_name ADD column_name datatype;
+
+ALTER TABLE table_name MODIFY column_name datatype;
+
+ALTER TABLE table_name DROP COLUMN column_name;
+
+TRUNCATE TABLE table_name;
+
+DROP TABLE table_name;
+
+DROP DATABASE database_name;
+
+============================================================
+21-july
+
+
+-- Create a table
+CREATE TABLE Student11 (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT
+);
+
+-- Insert data
+INSERT INTO Student11 VALUES (1, 'mohan sai', 19);
+
+-- Display data
+SELECT * FROM Student11;
+
+-- Update data
+UPDATE Student11
+SET Age = 20
+WHERE StudentID = 1;
+
+-- Delete data
+DELETE FROM Student11
+WHERE StudentID = 1;
+
+
+================================================================
+
+DROP TABLE IF EXISTS orders;
+
+CREATE TABLE orders (
+    id INT,
+    status VARCHAR(20) DEFAULT 'PENDING',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO orders (id)
+VALUES
+(1),
+(2),
+(3);
+
+INSERT INTO orders (id, status)
+VALUES
+(4, 'COMPLETED'),
+(5, 'COMPLETED');
+
+SELECT * FROM orders;
+
+========================================================================
+
+DROP TABLE IF EXISTS students;
+
+CREATE TABLE students (
+    id INT,
+    course_id INT,
+
+    PRIMARY KEY (id, course_id)
+);
+
+INSERT INTO students (id,COURSE_ID) values (1,3);
+INSERT INTO students (id,COURSE_ID) values (1,1);
+INSERT INTO students (id,COURSE_ID) values (1,4);
+
+
+
+===================================================================
+
+DROP TABLE IF EXISTS students2;
+
+CREATE TABLE students2 (
+    id INT UNIQUE KEY
+);
+
+INSERT INTO students (id,COURSE_ID) values (1,3);
+INSERT INTO students (id,COURSE_ID) values (1,1);
+INSERT INTO students (id,COURSE_ID) values (1,4);
+
+====================================================================
+
